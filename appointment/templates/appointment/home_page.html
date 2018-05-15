@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Awesome Amy's Barbershop</title>
+</head>
+<body>
+	<h1>Welcome to Awesome Amy's Barbershop!</h1>
+
+	<!-- Barbers go here -->
+	<p>Jasper: Specialization in baby hair</p>
+	<img src="https://tse2.mm.bing.net/th?id=OIP.aGVrYL4pd9kBFqLFqdu3VgHaEk&pid=Api">
+
+	<p>Martin: Specialization in German hair</p>
+	<img src="https://tse4.mm.bing.net/th?id=OIP.HSF_blnKZtRJdfaKCPB-RAHaE7&pid=Api">
+
+	<form method="POST">
+		{% csrf_token %}
+		<input type="text" name="time" placeholder="please type your appointment time"><br>
+		<input type="text" name="barber_name" placeholder="Please write your barber's name"><br>
+		<input type="text" name="customer_name" placeholder="Please write your name"><br>
+		<input type="Submit" value="make your appointment">
+		
+	</form>
+
+	<h1>Your Appointment</h1>
+	<p>Time: {{time}}</p>
+</body>
+</html>
